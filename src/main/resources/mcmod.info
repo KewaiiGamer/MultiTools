@@ -2,10 +2,9 @@
 {
   "modid": "multitools",
   "name": "Multi Tools",
-  "description": "Adds 2 new items: Paxel and UniversalTool, two multi use tools that work as an Axe, Pickaxe and Shovel. The second one works as an hoe too.",
-  "version": "Beta-2",
+  "description": "Adds a paxel and a universal tool. Both combinations of various tools.",
+  "version": "1.1.1.0",
   "mcversion": "${mcversion}",
-  "url": "",
   "updateUrl": "",
   "authorList": ["KewaiiGamer"],
   "credits": "",

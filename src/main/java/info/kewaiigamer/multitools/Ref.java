@@ -10,7 +10,7 @@ public class Ref {
     public static final String CLIENT_PROXY_CLASS = "info.kewaiigamer.multitools.proxy.ClientProxy";
     public static final String SERVER_PROXY_CLASS = "info.kewaiigamer.multitools.proxy.ServerProxy";
 
-    public static final String ACCEPTED_MC_VERSIONS = "[1.10.2]";
+    public static final String ACCEPTED_MC_VERSIONS = "[1.11.2]";
 
     public static final String KewaiiLib_MODID = "kelib";
     public static final String KewaiiLib_VERSION_MAJOR = "1";

@@ -19,7 +19,7 @@ compileJava {
 }
 
 minecraft {
-    version = forge_1_10_2
+    version = forge_version
     runDir = "run"
     mappings = mappings_version
 }

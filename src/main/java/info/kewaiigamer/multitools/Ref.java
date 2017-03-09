@@ -15,8 +15,8 @@ public class Ref {
     public static final String KewaiiLib_MODID = "kelib";
     public static final String KewaiiLib_VERSION_MAJOR = "1";
     public static final String KewaiiLib_VERSION_MINOR = ".3";
-    public static final String KewaiiLib_VERSION_PATCH = ".1";
-    public static final String KewaiiLib_VERSION_BUILD = ".2";
+    public static final String KewaiiLib_VERSION_PATCH = ".2";
+    public static final String KewaiiLib_VERSION_BUILD = ".0";
 
     public static final String Substratum_MODID = "substratum";
 

@@ -1,21 +1,23 @@
 buildscript {
     repositories {
-        jcenter()
+        maven {
+            url "http://repo1.maven.org/maven2/"
+        }
         maven { url = "http://files.minecraftforge.net/maven" }
     }
     dependencies {
-        classpath 'net.minecraftforge.gradle:ForgeGradle:2.2-SNAPSHOT'
+        classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
     }
 }
 apply plugin: 'net.minecraftforge.gradle.forge'
 
-version = version_major + version_minor + version_patch + version_build + "-" + mc_version
+version = version_major + version_minor + version_patch + "-" + mc_version
 group= package_group
 archivesBaseName = mod_name
 
-sourceCompatibility = targetCompatibility = "1.7" // Need this here so eclipse task generates correctly.
+sourceCompatibility = targetCompatibility = "1.8" // Need this here so eclipse task generates correctly.
 compileJava {
-    sourceCompatibility = targetCompatibility = "1.7"
+    sourceCompatibility = targetCompatibility = "1.8"
 }
 
 minecraft {
@@ -42,3 +44,4 @@ processResources
         exclude 'mcmod.info'
     }
 }
+idea { module { inheritOutputDirs = true } }

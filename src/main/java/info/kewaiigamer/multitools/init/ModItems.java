@@ -1,85 +1,86 @@
 package info.kewaiigamer.multitools.init;
 
-import exter.substratum.material.EnumMaterialEquipment;
-import info.kewaiigamer.kewaiilib.multitools.EnumVanillaMaterial;
-import info.kewaiigamer.multitools.utils.Utils;
+import info.kewaiigamer.multitools.Ref;
+import info.kewaiigamer.multitools.config.ConfigHandler;
+import info.kewaiigamer.multitools.item.CustomCreativeTabItemIcon;
 import net.minecraft.item.Item;
-import net.minecraftforge.fml.common.Loader;
+import net.minecraft.item.Item.ToolMaterial;
 
-import static info.kewaiigamer.multitools.Ref.Substratum_MODID;
+import static info.kewaiigamer.multitools.proxy.ClientProxy.initRender;
+import static info.kewaiigamer.multitools.utils.Utils.createPaxel;
+import static info.kewaiigamer.multitools.utils.Utils.createUniversalTool;
+
 
 public class ModItems {
-    public static Item woodpaxel;
-    public static Item stonepaxel;
-    public static Item ironpaxel;
-    public static Item goldpaxel;
-    public static Item diamondpaxel;
-    public static Item aluminiumpaxel;
-    public static Item bronzepaxel;
-    public static Item copperpaxel;
-    public static Item electrumpaxel;
-    public static Item enderiumpaxel;
-    public static Item invarpaxel;
-    public static Item lumiumpaxel;
-    public static Item signalumpaxel;
-    public static Item silverpaxel;
-    public static Item steelpaxel;
-    public static Item wooduniversaltool;
-    public static Item stoneuniversaltool;
-    public static Item golduniversaltool;
-    public static Item ironuniversaltool;
-    public static Item diamonduniversaltool;
-    public static Item aluminiumuniversaltool;
-    public static Item bronzeuniversaltool;
-    public static Item copperuniversaltool;
-    public static Item electrumuniversaltool;
-    public static Item enderiumuniversaltool;
-    public static Item invaruniversaltool;
-    public static Item lumiumuniversaltool;
-    public static Item signalumuniversaltool;
-    public static Item silveruniversaltool;
-    public static Item steeluniversaltool;
+    public static Item woodPaxel;
+    public static Item stonePaxel;
+    public static Item ironPaxel;
+    public static Item goldPaxel;
+    public static Item diamondPaxel;
+
+
+    public static Item woodUniversalTool;
+    public static Item stoneUniversalTool;
+    public static Item goldUniversalTool;
+    public static Item ironUniversalTool;
+    public static Item diamondUniversalTool;
+
+
+    public static Item woodPaxel_tabIcon;
+    public static Item woodUniversalTool_tabIcon;
 
     public ModItems() {
-        ModItems.registerItems();
+        registerItems();
     }
 
     public static void registerItems() {
-        /** Paxels */
-        woodpaxel = Utils.createMultiToolsPaxel(Item.ToolMaterial.WOOD, EnumVanillaMaterial.WOOD);
-        stonepaxel = Utils.createMultiToolsPaxel(Item.ToolMaterial.STONE, EnumVanillaMaterial.STONE);
-        ironpaxel = Utils.createMultiToolsPaxel(Item.ToolMaterial.IRON, EnumVanillaMaterial.IRON);
-        goldpaxel = Utils.createMultiToolsPaxel(Item.ToolMaterial.GOLD, EnumVanillaMaterial.GOLD);
-        diamondpaxel = Utils.createMultiToolsPaxel(Item.ToolMaterial.DIAMOND, EnumVanillaMaterial.DIAMOND);
-        /** Universal Tools */
-        wooduniversaltool = Utils.createMultiToolsUniversalTool(Item.ToolMaterial.WOOD, EnumVanillaMaterial.WOOD);
-        stoneuniversaltool = Utils.createMultiToolsUniversalTool(Item.ToolMaterial.STONE, EnumVanillaMaterial.STONE);
-        ironuniversaltool = Utils.createMultiToolsUniversalTool(Item.ToolMaterial.IRON, EnumVanillaMaterial.IRON);
-        golduniversaltool = Utils.createMultiToolsUniversalTool(Item.ToolMaterial.GOLD, EnumVanillaMaterial.GOLD);
-        diamonduniversaltool = Utils.createMultiToolsUniversalTool(Item.ToolMaterial.DIAMOND, EnumVanillaMaterial.DIAMOND);
-        if (Loader.isModLoaded(Substratum_MODID)) {
-            /** Metal Paxels */
-            aluminiumpaxel = Utils.createMultiToolsMetalPaxel(EnumMaterialEquipment.ALUMINIUM);
-            bronzepaxel = Utils.createMultiToolsMetalPaxel(EnumMaterialEquipment.BRONZE);
-            copperpaxel = Utils.createMultiToolsMetalPaxel(EnumMaterialEquipment.COPPER);
-            electrumpaxel = Utils.createMultiToolsMetalPaxel(EnumMaterialEquipment.ELECTRUM);
-            enderiumpaxel = Utils.createMultiToolsMetalPaxel(EnumMaterialEquipment.ENDERIUM);
-            invarpaxel = Utils.createMultiToolsMetalPaxel(EnumMaterialEquipment.INVAR);
-            lumiumpaxel = Utils.createMultiToolsMetalPaxel(EnumMaterialEquipment.LUMIUM);
-            signalumpaxel = Utils.createMultiToolsMetalPaxel(EnumMaterialEquipment.SIGNALUM);
-            silverpaxel = Utils.createMultiToolsMetalPaxel(EnumMaterialEquipment.SILVER);
-            steelpaxel = Utils.createMultiToolsMetalPaxel(EnumMaterialEquipment.STEEL);
-            /** Metal Universal Tools*/
-            aluminiumuniversaltool = Utils.createMultiToolsMetalUniversalTool(EnumMaterialEquipment.ALUMINIUM);
-            bronzeuniversaltool = Utils.createMultiToolsMetalUniversalTool(EnumMaterialEquipment.BRONZE);
-            copperuniversaltool = Utils.createMultiToolsMetalUniversalTool(EnumMaterialEquipment.COPPER);
-            electrumuniversaltool = Utils.createMultiToolsMetalUniversalTool(EnumMaterialEquipment.ELECTRUM);
-            enderiumuniversaltool = Utils.createMultiToolsMetalUniversalTool(EnumMaterialEquipment.ENDERIUM);
-            invaruniversaltool = Utils.createMultiToolsMetalUniversalTool(EnumMaterialEquipment.INVAR);
-            lumiumuniversaltool = Utils.createMultiToolsMetalUniversalTool(EnumMaterialEquipment.LUMIUM);
-            signalumuniversaltool = Utils.createMultiToolsMetalUniversalTool(EnumMaterialEquipment.SIGNALUM);
-            silveruniversaltool = Utils.createMultiToolsMetalUniversalTool(EnumMaterialEquipment.SILVER);
-            steeluniversaltool = Utils.createMultiToolsMetalUniversalTool(EnumMaterialEquipment.STEEL);
+        woodPaxel_tabIcon = new CustomCreativeTabItemIcon(Ref.MODID, "paxel_wood");
+        woodUniversalTool_tabIcon = new CustomCreativeTabItemIcon(Ref.MODNAME, "universaltool_wood");
+
+        if (ConfigHandler.vanilla) {
+            if (ConfigHandler.vanillaPaxels) {
+                if (ConfigHandler.woodenPaxel)
+                    woodPaxel = createPaxel(ToolMaterial.WOOD);
+                if (ConfigHandler.stonePaxel)
+                    stonePaxel = createPaxel(ToolMaterial.STONE);
+                if (ConfigHandler.ironPaxel)
+                    ironPaxel = createPaxel(ToolMaterial.IRON);
+                if (ConfigHandler.goldenPaxel)
+                    goldPaxel = createPaxel(ToolMaterial.GOLD);
+                if (ConfigHandler.diamondPaxel) {
+                    diamondPaxel = createPaxel(ToolMaterial.DIAMOND);
+                }
+            }
+            if (ConfigHandler.vanillaUniversalTools) {
+                if (ConfigHandler.woodenUniversalTool)
+                    woodUniversalTool = createUniversalTool(ToolMaterial.WOOD);
+                if (ConfigHandler.stoneUniversalTool)
+                    stoneUniversalTool = createUniversalTool(ToolMaterial.STONE);
+                if (ConfigHandler.ironUniversalTool)
+                    ironUniversalTool = createUniversalTool(ToolMaterial.IRON);
+                if (ConfigHandler.goldenUniversalTool)
+                    goldUniversalTool = createUniversalTool(ToolMaterial.GOLD);
+                if (ConfigHandler.diamondUniversalTool)
+                    diamondUniversalTool = createUniversalTool(ToolMaterial.DIAMOND);
+            }
         }
+    }
+    public static void registerModels() {
+        initRender(ModItems.woodPaxel);
+        initRender(ModItems.stonePaxel);
+        initRender(ModItems.ironPaxel);
+        initRender(ModItems.goldPaxel);
+        initRender(ModItems.diamondPaxel);
+
+        initRender(ModItems.woodUniversalTool);
+        initRender(ModItems.stoneUniversalTool);
+        initRender(ModItems.ironUniversalTool);
+        initRender(ModItems.goldUniversalTool);
+        initRender(ModItems.diamondUniversalTool);
+
+        initRender(ModItems.woodPaxel_tabIcon);
+        initRender(ModItems.woodUniversalTool_tabIcon);
+
+
     }
 }

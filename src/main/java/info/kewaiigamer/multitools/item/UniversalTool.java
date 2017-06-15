@@ -33,8 +33,8 @@ public class UniversalTool extends ItemPickaxe {
 
     public UniversalTool(String modId, ToolMaterial material) {
         super(material);
-        this.setUnlocalizedName(modId + ":universaltool_" + MaterialHandler.suffix(material));
-        this.setRegistryName("universaltool_" + MaterialHandler.suffix(material));
+        this.setUnlocalizedName(modId + ":universaltool_" + MaterialHandler.suffix(material).toLowerCase());
+        this.setRegistryName("universaltool_" + MaterialHandler.suffix(material).toLowerCase());
     }
 
     public Set<String> getToolClasses(ItemStack stack) {

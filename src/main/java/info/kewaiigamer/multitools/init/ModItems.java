@@ -1,11 +1,13 @@
 package info.kewaiigamer.multitools.init;
 
-import info.kewaiigamer.multitools.Ref;
-import info.kewaiigamer.multitools.config.ConfigHandler;
+import info.kewaiigamer.multitools.ConfigValue;
 import info.kewaiigamer.multitools.item.CustomCreativeTabItemIcon;
 import net.minecraft.item.Item;
-import net.minecraft.item.Item.ToolMaterial;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import static info.kewaiigamer.multitools.config.ConfigHandler.*;
 import static info.kewaiigamer.multitools.proxy.ClientProxy.initRender;
 import static info.kewaiigamer.multitools.utils.Utils.createPaxel;
 import static info.kewaiigamer.multitools.utils.Utils.createUniversalTool;
@@ -29,42 +31,10 @@ public class ModItems {
     public static Item woodPaxel_tabIcon;
     public static Item woodUniversalTool_tabIcon;
 
-    public ModItems() {
-        registerItems();
-    }
+    public static List<Item> vanilla = new ArrayList<>();
+    public static List<Item> vanillaPaxels = new ArrayList<>();
+    public static List<Item> vanillaUniversalTools = new ArrayList<>();
 
-    public static void registerItems() {
-        woodPaxel_tabIcon = new CustomCreativeTabItemIcon(Ref.MODID, "paxel_wood");
-        woodUniversalTool_tabIcon = new CustomCreativeTabItemIcon(Ref.MODNAME, "universaltool_wood");
-
-        if (ConfigHandler.vanilla) {
-            if (ConfigHandler.vanillaPaxels) {
-                if (ConfigHandler.woodenPaxel)
-                    woodPaxel = createPaxel(ToolMaterial.WOOD);
-                if (ConfigHandler.stonePaxel)
-                    stonePaxel = createPaxel(ToolMaterial.STONE);
-                if (ConfigHandler.ironPaxel)
-                    ironPaxel = createPaxel(ToolMaterial.IRON);
-                if (ConfigHandler.goldenPaxel)
-                    goldPaxel = createPaxel(ToolMaterial.GOLD);
-                if (ConfigHandler.diamondPaxel) {
-                    diamondPaxel = createPaxel(ToolMaterial.DIAMOND);
-                }
-            }
-            if (ConfigHandler.vanillaUniversalTools) {
-                if (ConfigHandler.woodenUniversalTool)
-                    woodUniversalTool = createUniversalTool(ToolMaterial.WOOD);
-                if (ConfigHandler.stoneUniversalTool)
-                    stoneUniversalTool = createUniversalTool(ToolMaterial.STONE);
-                if (ConfigHandler.ironUniversalTool)
-                    ironUniversalTool = createUniversalTool(ToolMaterial.IRON);
-                if (ConfigHandler.goldenUniversalTool)
-                    goldUniversalTool = createUniversalTool(ToolMaterial.GOLD);
-                if (ConfigHandler.diamondUniversalTool)
-                    diamondUniversalTool = createUniversalTool(ToolMaterial.DIAMOND);
-            }
-        }
-    }
     public static void registerModels() {
         initRender(ModItems.woodPaxel);
         initRender(ModItems.stonePaxel);
@@ -80,7 +50,77 @@ public class ModItems {
 
         initRender(ModItems.woodPaxel_tabIcon);
         initRender(ModItems.woodUniversalTool_tabIcon);
+    }
 
+    public static void setVanillaLists() {
+        setVanillaUniversalTools();
+        setVanillaUniversalToolsEnabled();
+        setVanillaPaxels();
+        setVanillaPaxelsEnabled();
+        setVanilla();
+        setVanillaEnabled();
+    }
 
+    public static void setVanillaPaxels() {
+        vanillaPaxels.add(woodPaxel);
+        vanillaPaxels.add(stonePaxel);
+        vanillaPaxels.add(ironPaxel);
+        vanillaPaxels.add(goldPaxel);
+        vanillaPaxels.add(diamondPaxel);
+    }
+
+    public static void setVanillaUniversalTools() {
+        vanillaUniversalTools.add(woodUniversalTool);
+        vanillaUniversalTools.add(stoneUniversalTool);
+        vanillaUniversalTools.add(ironUniversalTool);
+        vanillaUniversalTools.add(goldUniversalTool);
+        vanillaUniversalTools.add(diamondUniversalTool);
+    }
+
+    public static void setVanilla() {
+        vanilla.addAll(vanillaPaxels);
+        vanilla.addAll(vanillaUniversalTools);
+    }
+
+    public static void registerItems() {
+        woodPaxel_tabIcon = new CustomCreativeTabItemIcon("multitools", "paxel_wood");
+        woodUniversalTool_tabIcon = new CustomCreativeTabItemIcon("multitools", "universaltool_wood");
+        initRender(woodPaxel_tabIcon);
+        initRender(woodUniversalTool_tabIcon);
+        setVanillaLists();
+        createVanillaPaxels();
+        createVanillaUniversalTools();
+    }
+
+    public static void createVanillaPaxels() {
+        for (Item.ToolMaterial material : Item.ToolMaterial.values()) {
+            for (ConfigValue bol : vanillaPaxelsEnabled) {
+                String bolMaterial = bol.getName();
+                String materialName = material.name().replace("ToolMaterial", "");
+                if (bolMaterial.equalsIgnoreCase(materialName) && bol.getValue()) {
+                    for (Item item : vanillaPaxels) {
+                        item = createPaxel(material);
+                        initRender(item);
+                        break;
+                    }
+                }
+            }
+        }
+    }
+
+    public static void createVanillaUniversalTools() {
+        for (Item.ToolMaterial material : Item.ToolMaterial.values()) {
+            for (ConfigValue bol : vanillaUniversalToolsEnabled) {
+                String bolMaterial = bol.getName();
+                String materialName = material.name().replace("ToolMaterial", "");
+                if (bolMaterial.equalsIgnoreCase(materialName) && bol.getValue()) {
+                    for (Item item : vanillaUniversalTools) {
+                        item = createUniversalTool(material);
+                        initRender(item);
+                        break;
+                    }
+                }
+            }
+        }
     }
 }

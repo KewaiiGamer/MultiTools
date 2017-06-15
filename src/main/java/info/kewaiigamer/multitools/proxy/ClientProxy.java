@@ -1,14 +1,11 @@
 package info.kewaiigamer.multitools.proxy;
 
-import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-
-import static info.kewaiigamer.multitools.init.ModItems.registerModels;
 
 public class ClientProxy extends CommonProxy {
 
@@ -28,6 +25,5 @@ public class ClientProxy extends CommonProxy {
 
     public void postInit(FMLPostInitializationEvent e) {
         super.postInit(e);
-        registerModels();
     }
 }

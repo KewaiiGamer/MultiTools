@@ -10,11 +10,11 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class CommonProxy {
 
     public void preInit(FMLPreInitializationEvent e) {
-        new ToolsConfig();
+        ToolsConfig.initConfig();
     }
 
     public void init(FMLInitializationEvent e) {
-        new ModItems();
+        ModItems.registerItems();
     }
 
     public void postInit(FMLPostInitializationEvent e) {

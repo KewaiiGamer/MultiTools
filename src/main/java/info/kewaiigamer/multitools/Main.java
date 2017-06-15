@@ -1,6 +1,5 @@
 package info.kewaiigamer.multitools;
 
-import info.kewaiigamer.multitools.config.ToolsConfig;
 import info.kewaiigamer.multitools.proxy.CommonProxy;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
@@ -26,7 +25,6 @@ public class Main {
     @EventHandler
     public void preInit(FMLPreInitializationEvent e) {
         proxy.preInit(e);
-        ToolsConfig.initConfig();
     }
 
     @EventHandler

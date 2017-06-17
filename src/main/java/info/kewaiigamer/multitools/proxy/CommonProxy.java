@@ -10,10 +10,10 @@ public class CommonProxy {
 
     public void preInit(FMLPreInitializationEvent e) {
         ToolsConfig.initConfig();
+        ModItems.registerItems();
     }
 
     public void init(FMLInitializationEvent e) {
-        ModItems.registerItems();
     }
 
     public void postInit(FMLPostInitializationEvent e) {

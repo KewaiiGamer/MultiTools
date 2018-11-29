@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xyz",
+    "hs ",
+    " s "
+  ],
+  "key": {
+    "x": {
+      "item": "basemetals:antimony_axe"
+    },
+    "y": {
+      "item": "basemetals:antimony_pickaxe"
+    },
+    "z": {
+      "item": "basemetals:antimony_shovel"
+    },
+    "h": {
+      "item": "basemetals:antimony_hoe"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "multitools:universaltool_antimony",
+    "count": 1
+  }
+}

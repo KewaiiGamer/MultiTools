@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xyz",
+    "hs ",
+    " s "
+  ],
+  "key": {
+    "x": {
+      "item": "basemetals:electrum_axe"
+    },
+    "y": {
+      "item": "basemetals:electrum_pickaxe"
+    },
+    "z": {
+      "item": "basemetals:electrum_shovel"
+    },
+    "h": {
+      "item": "basemetals:electrum_hoe"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "multitools:universaltool_electrum",
+    "count": 1
+  }
+}

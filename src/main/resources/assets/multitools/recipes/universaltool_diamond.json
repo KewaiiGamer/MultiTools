@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xyz",
+    "hs ",
+    " s "
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:diamond_axe"
+    },
+    "y": {
+      "item": "minecraft:diamond_pickaxe"
+    },
+    "z": {
+      "item": "minecraft:diamond_shovel"
+    },
+    "h": {
+      "item": "minecraft:diamond_hoe"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "multitools:universaltool_diamond",
+    "count": 1
+  }
+}

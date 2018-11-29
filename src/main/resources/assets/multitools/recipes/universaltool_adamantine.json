@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xyz",
+    "hs ",
+    " s "
+  ],
+  "key": {
+    "x": {
+      "item": "basemetals:adamantine_axe"
+    },
+    "y": {
+      "item": "basemetals:adamantine_pickaxe"
+    },
+    "z": {
+      "item": "basemetals:adamantine_shovel"
+    },
+    "h": {
+      "item": "basemetals:adamantine_hoe"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "multitools:universaltool_adamantine",
+    "count": 1
+  }
+}

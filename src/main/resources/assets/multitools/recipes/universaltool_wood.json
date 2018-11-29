@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xyz",
+    "hs ",
+    " s "
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:wooden_axe"
+    },
+    "y": {
+      "item": "minecraft:wooden_pickaxe"
+    },
+    "z": {
+      "item": "minecraft:wooden_shovel"
+    },
+    "h": {
+      "item": "minecraft:wooden_hoe"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "multitools:universaltool_wood",
+    "count": 1
+  }
+}

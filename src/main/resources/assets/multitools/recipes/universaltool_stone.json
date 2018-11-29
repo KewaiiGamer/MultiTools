@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xyz",
+    "hs ",
+    " s "
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:stone_axe"
+    },
+    "y": {
+      "item": "minecraft:stone_pickaxe"
+    },
+    "z": {
+      "item": "minecraft:stone_shovel"
+    },
+    "h": {
+      "item": "minecraft:stone_hoe"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "multitools:universaltool_stone",
+    "count": 1
+  }
+}

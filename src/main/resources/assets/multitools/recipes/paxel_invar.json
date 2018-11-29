@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xyz",
+    " s ",
+    " s "
+  ],
+  "key": {
+    "x": {
+      "item": "basemetals:invar_axe"
+    },
+    "y": {
+      "item": "basemetals:invar_pickaxe"
+    },
+    "z": {
+      "item": "basemetals:invar_shovel"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result":
+  {
+    "item": "multitools:paxel_invar",
+    "count": 1
+  }
+}

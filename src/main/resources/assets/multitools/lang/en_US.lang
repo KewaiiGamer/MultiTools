@@ -125,7 +125,7 @@ item.multitools:universaltool_boron.name=Boron Universal Tool
 item.multitools:universaltool_beryllium.name=Beryllium Universal Tool
 item.multitools:universaltool_thorium.name=Thorium Universal Tool
 
-itemGroup.universal_tools=Universal Tools
+itemGroup.universaltools=Universal Tools
 itemGroup.paxels=Paxels
 itemGroup.basemetals_paxels=Base Metals Paxels
 itemGroup.basemetals_universaltools=Base Metals Universal Tools

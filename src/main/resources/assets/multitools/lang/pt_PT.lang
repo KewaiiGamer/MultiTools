@@ -125,7 +125,7 @@ item.multitools:universaltool_boron.name=Ferramenta Universal de Boron
 item.multitools:universaltool_beryllium.name=Ferramenta Universal de Beryllium
 item.multitools:universaltool_thorium.name=Ferramenta Universal de Thorium
 
-itemGroup.universal_tools=Feramentas Universais
+itemGroup.universaltools=Feramentas Universais
 itemGroup.paxels=Paxels
 itemGroup.basemetals_paxels=Paxels de Base Metals
 itemGroup.basemetals_universaltools=Feramentas Universais de Base Metals

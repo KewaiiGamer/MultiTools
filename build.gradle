@@ -1,9 +1,7 @@
 buildscript {
     repositories {
-        maven {
-            url "http://repo1.maven.org/maven2/"
-        }
-        maven { url = "http://files.minecraftforge.net/maven" }
+        jcenter()
+        maven { url = "https://files.minecraftforge.net/maven" }
     }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
@@ -27,7 +25,10 @@ minecraft {
 }
 
 dependencies {
+    provided files("D:/Coding/Java/Forge/forge-1.12.2/libs/ModernMetals-1.12-2.5.0-beta6.139.jar")
+    provided files("D:/Coding/Java/Forge/forge-1.12.2/libs/BaseMetals-1.12-2.5.0-beta6.280.jar")
 }
+
 
 processResources
 {

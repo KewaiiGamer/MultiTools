@@ -1,8 +1,10 @@
 package info.kewaiigamer.multitools.proxy;
 
+import info.kewaiigamer.multitools.Ref;
 import info.kewaiigamer.multitools.init.ModItems;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.Optional;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -14,6 +16,18 @@ public class ClientProxy extends CommonProxy {
     @SubscribeEvent
     public static void registerModels(ModelRegistryEvent event) {
         ModItems.initModels();
+    }
+
+    @SubscribeEvent
+    @Optional.Method(modid = Ref.BASEMETALS_MODID)
+    public static void registerBaseMetalsModels(ModelRegistryEvent event) {
+        ModItems.initBaseMetalsModels();
+    }
+
+    @SubscribeEvent
+    @Optional.Method(modid = Ref.MODERNMETALS_MODID)
+    public static void registerModernMetalsModels(ModelRegistryEvent event) {
+        ModItems.initModernMetalsModels();
     }
 
     @Override

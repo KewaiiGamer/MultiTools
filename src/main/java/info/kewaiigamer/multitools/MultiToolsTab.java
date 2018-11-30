@@ -20,8 +20,8 @@ public class MultiToolsTab extends CreativeTabs {
     }
 
     @Override
-    public ItemStack getTabIconItem() {
-        return items.get(0).getDefaultInstance();
+    public ItemStack createIcon() {
+        return this.items.get(0).getDefaultInstance();
     }
 
     public boolean hasSearchBar() {

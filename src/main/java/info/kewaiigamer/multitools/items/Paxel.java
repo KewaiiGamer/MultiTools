@@ -7,7 +7,7 @@ import com.mcmoddev.basemetals.BaseMetals;
 import com.mcmoddev.lib.init.Materials;
 import com.mcmoddev.lib.material.MMDMaterial;
 import com.mcmoddev.modernmetals.ModernMetals;
-import info.kewaiigamer.multitools.Main;
+import info.kewaiigamer.multitools.Tabs;
 import info.kewaiigamer.multitools.enums.EnumVanillaMaterial;
 import info.kewaiigamer.multitools.init.ModItems;
 import net.minecraft.block.Block;
@@ -33,26 +33,24 @@ public class Paxel extends ItemPickaxe {
         super(material);
         EnumVanillaMaterial vanilla = EnumVanillaMaterial.valueOf(material.name());
         this.setRegistryName("paxel_" + vanilla.suffix);
-        this.setUnlocalizedName(modId + ":paxel_" + vanilla.suffix);
-        this.setCreativeTab(Main.PAXELS);
+        this.setTranslationKey(modId + ":paxel_" + vanilla.suffix);
+        this.setCreativeTab(Tabs.PAXELS);
         ModItems.paxels.add(this);
     }
 
     public Paxel(String modId, MMDMaterial material, String modId2) {
         super(Objects.requireNonNull(Materials.getToolMaterialFor(material)));
-        this.setUnlocalizedName(modId + ":paxel_" + material.getName());
         this.setRegistryName("paxel_" + material.getName());
+        this.setTranslationKey(modId + ":paxel_" + material.getName());
         if (modId2.equals(modId)) {
             ModItems.paxels.add(this);
-            this.setCreativeTab(Main.PAXELS);
-        }
-        if (modId2.equals(BaseMetals.MODID)) {
+            this.setCreativeTab(Tabs.PAXELS);
+        } else if (modId2.equals(BaseMetals.MODID)) {
             ModItems.baseMetalsPaxels.add(this);
-            this.setCreativeTab(Main.BASEMETALS_PAXELS);
-        }
-        if (modId2.equals(ModernMetals.MODID)) {
+            this.setCreativeTab(Tabs.BASEMETALS_PAXELS);
+        } else if (modId2.equals(ModernMetals.MODID)) {
             ModItems.modernMetalsPaxels.add(this);
-            this.setCreativeTab(Main.MODERNMETALS_PAXELS);
+            this.setCreativeTab(Tabs.MODERNMETALS_PAXELS);
         }
     }
 

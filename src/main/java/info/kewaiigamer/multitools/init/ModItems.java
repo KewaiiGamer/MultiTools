@@ -1,13 +1,12 @@
 package info.kewaiigamer.multitools.init;
 
-import com.mcmoddev.basemetals.BaseMetals;
-import com.mcmoddev.modernmetals.ModernMetals;
 import info.kewaiigamer.multitools.Ref;
 import info.kewaiigamer.multitools.items.Paxel;
 import info.kewaiigamer.multitools.items.UniversalTool;
 import info.kewaiigamer.multitools.utils.Utils;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.Loader;
+import net.minecraftforge.fml.common.Optional;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -23,154 +22,171 @@ public class ModItems {
     public static List<Item> baseMetalsUniversalTools = new ArrayList<>();
     public static List<Item> modernMetalsUniversalTools = new ArrayList<>();
 
+
+    @Optional.Method(modid = Ref.MODERNMETALS_MODID)
+    public static void initModernMetalsItems() {
+        Utils.createModernMetalsPaxel("aluminum");
+            /*
+            aluminumbrassPaxel = Utils.createModernMetalsPaxel("aluminumbrass");
+            cadmiumPaxel = Utils.createModernMetalsPaxel("cadmium");
+            chromiumPaxel = Utils.createModernMetalsPaxel("chromium");
+            galvanizedsteelPaxel = Utils.createModernMetalsPaxel("galvanizedsteel");
+            iridiumPaxel = Utils.createModernMetalsPaxel("iridium");
+            magnesiumPaxel = Utils.createModernMetalsPaxel("magneisum");
+            manganesePaxel = Utils.createModernMetalsPaxel("manganese");
+            nichromePaxel = Utils.createModernMetalsPaxel("nichrome");
+            osmiumPaxel = Utils.createModernMetalsPaxel("osmium");
+            plutoniumPaxel = Utils.createModernMetalsPaxel("plutonium");
+            rutilePaxel = Utils.createModernMetalsPaxel("rutile");
+            stainlesssteelPaxel = Utils.createModernMetalsPaxel("stainlesssteel");
+            tantalumPaxel = Utils.createModernMetalsPaxel("tantalum");
+            titaniumPaxel = Utils.createModernMetalsPaxel("titanium");
+            tungstenPaxel = Utils.createModernMetalsPaxel("tungsten");
+            uraniumPaxel = Utils.createModernMetalsPaxel("uranium");
+            zirconiumPaxel = Utils.createModernMetalsPaxel("zirconium");
+            boronPaxel = Utils.createModernMetalsPaxel("boron");
+            berylliumPaxel = Utils.createModernMetalsPaxel("beryllium");
+            thoriumPaxel = Utils.createModernMetalsPaxel("thorium");
+            */
+        Utils.createModernMetalsUniversalTool("aluminum");
+            /*
+            aluminumbrassUniversalTool = Utils.createModernMetalsUniversalTool("aluminumbrass");
+            cadmiumUniversalTool = Utils.createModernMetalsUniversalTool("cadmium");
+            chromiumUniversalTool = Utils.createModernMetalsUniversalTool("chromium");
+            galvanizedsteelUniversalTool = Utils.createModernMetalsUniversalTool("galvanizedsteel");
+            iridiumUniversalTool = Utils.createModernMetalsUniversalTool("iridium");
+            magnesiumUniversalTool = Utils.createModernMetalsUniversalTool("magneisum");
+            manganeseUniversalTool = Utils.createModernMetalsUniversalTool("manganese");
+            nichromeUniversalTool = Utils.createModernMetalsUniversalTool("nichrome");
+            osmiumUniversalTool = Utils.createModernMetalsUniversalTool("osmium");
+            plutoniumUniversalTool = Utils.createModernMetalsUniversalTool("plutonium");
+            rutileUniversalTool = Utils.createModernMetalsUniversalTool("rutile");
+            stainlesssteelUniversalTool = Utils.createModernMetalsUniversalTool("stainlesssteel");
+            tantalumUniversalTool = Utils.createModernMetalsUniversalTool("tantalum");
+            titaniumUniversalTool = Utils.createModernMetalsUniversalTool("titanium");
+            tungstenUniversalTool = Utils.createModernMetalsUniversalTool("tungsten");
+            uraniumUniversalTool = Utils.createModernMetalsUniversalTool("uranium");
+            zirconiumUniversalTool = Utils.createModernMetalsUniversalTool("zirconium");
+            boronUniversalTool = Utils.createModernMetalsUniversalTool("boron");
+            berylliumUniversalTool = Utils.createModernMetalsUniversalTool("beryllium");
+            thoriumUniversalTool = Utils.createModernMetalsUniversalTool("thorium");
+            */
+    }
+
+    @Optional.Method(modid = Ref.BASEMETALS_MODID)
+    public static void initBaseMetalsItems() {
+        Utils.createAlternatePaxel("wood");
+        Utils.createAlternatePaxel("stone");
+        Utils.createAlternatePaxel("iron");
+        Utils.createAlternatePaxel("gold");
+        Utils.createAlternatePaxel("diamond");
+        Utils.createAlternateUniversalTool("wood");
+        Utils.createAlternateUniversalTool("stone");
+        Utils.createAlternateUniversalTool("iron");
+        Utils.createAlternateUniversalTool("gold");
+        Utils.createAlternateUniversalTool("diamond");
+
+        Utils.createBaseMetalsPaxel("adamantine");
+        Utils.createBaseMetalsPaxel("antimony");
+        Utils.createBaseMetalsPaxel("aquarium");
+        //bismuthPaxel = Utils.createBaseMetalsPaxel("bismuth");
+        //brassPaxel = Utils.createBaseMetalsPaxel("brass");
+        Utils.createBaseMetalsPaxel("bronze");
+        //coalPaxel = Utils.createBaseMetalsPaxel("coal");
+        //coldironPaxel = Utils.createBaseMetalsPaxel("coldiron");
+        Utils.createBaseMetalsPaxel("copper");
+        //charcoalPaxel = Utils.createBaseMetalsPaxel("charcoal");
+        //cupronickelPaxel = Utils.createBaseMetalsPaxel("cupronickel");
+        Utils.createBaseMetalsPaxel("electrum");
+        //emeraldPaxel = Utils.createBaseMetalsPaxel("emerald");
+        Utils.createBaseMetalsPaxel("invar");
+        /*
+        lapisPaxel = Utils.createBaseMetalsPaxel("lapis");
+        leadPaxel = Utils.createBaseMetalsPaxel("lead");
+        mercuryPaxel = Utils.createBaseMetalsPaxel("mercury");
+        mithrilPaxel = Utils.createBaseMetalsPaxel("mithril");
+        nickelPaxel = Utils.createBaseMetalsPaxel("nickel");
+        obsidianPaxel = Utils.createBaseMetalsPaxel("obsidian");
+        pewterPaxel = Utils.createBaseMetalsPaxel("pewter");
+        platinumPaxel = Utils.createBaseMetalsPaxel("platinum");
+        prismarinePaxel = Utils.createBaseMetalsPaxel("prismarine");
+        quartzPaxel = Utils.createBaseMetalsPaxel("quartz");
+        redstonePaxel = Utils.createBaseMetalsPaxel("redstone");
+        */
+        Utils.createBaseMetalsPaxel("silver");
+        //starsteelPaxel = Utils.createBaseMetalsPaxel("starsteel");
+        Utils.createBaseMetalsPaxel("steel");
+        //tinPaxel = Utils.createBaseMetalsPaxel("tin");
+        //zincPaxel = Utils.createBaseMetalsPaxel("zinc");
+
+        Utils.createBaseMetalsUniversalTool("adamantine");
+        Utils.createBaseMetalsUniversalTool("antimony");
+        Utils.createBaseMetalsUniversalTool("aquarium");
+        //bismuthUniversalTool = Utils.createBaseMetalsUniversalTool(("bismuth");
+        //brassUniversalTool = Utils.createBaseMetalsUniversalTool(("brass");
+        Utils.createBaseMetalsUniversalTool("bronze");
+        //coalUniversalTool = Utils.createBaseMetalsUniversalTool(("coal");
+        //coldironUniversalTool = Utils.createBaseMetalsUniversalTool(("coldiron");
+        Utils.createBaseMetalsUniversalTool("copper");
+        //charcoalUniversalTool = Utils.createBaseMetalsUniversalTool(("charcoal");
+        //cupronickelUniversalTool = Utils.createBaseMetalsUniversalTool(("cupronickel");
+        //emeraldUniversalTool = Utils.createBaseMetalsUniversalTool(("emerald");
+        Utils.createBaseMetalsUniversalTool("electrum");
+        Utils.createBaseMetalsUniversalTool("invar");
+        /*
+        lapisUniversalTool = Utils.createBaseMetalsUniversalTool(("lapis");
+        leadUniversalTool = Utils.createBaseMetalsUniversalTool(("lead");
+        mercuryUniversalTool = Utils.createBaseMetalsUniversalTool(("mercury");
+        mithrilUniversalTool = Utils.createBaseMetalsUniversalTool(("mithril");
+        nickelUniversalTool = Utils.createBaseMetalsUniversalTool(("nickel");
+        obsidianUniversalTool = Utils.createBaseMetalsUniversalTool(("obsidian");
+        pewterUniversalTool = Utils.createBaseMetalsUniversalTool(("pewter");
+        platinumUniversalTool = Utils.createBaseMetalsUniversalTool(("platinum");
+        prismarineUniversalTool = Utils.createBaseMetalsUniversalTool(("prismarine");
+        quartzUniversalTool = Utils.createBaseMetalsUniversalTool(("quartz");
+        redstoneUniversalTool = Utils.createBaseMetalsUniversalTool(("redstone");
+        */
+        Utils.createBaseMetalsUniversalTool("silver");
+        //starsteelUniversalTool = Utils.createBaseMetalsUniversalTool(("starsteel");
+        Utils.createBaseMetalsUniversalTool("steel");
+        //tinUniversalTool = Utils.createBaseMetalsUniversalTool(("tin");
+        //zincUniversalTool = Utils.createBaseMetalsUniversalTool(("zinc");
+    }
+
     public static void initItems() {
-        if (Loader.isModLoaded(BaseMetals.MODID)) {
-            Utils.createPaxel("wood", Ref.MODID);
-            Utils.createPaxel("stone", Ref.MODID);
-            Utils.createPaxel("iron", Ref.MODID);
-            Utils.createPaxel("gold", Ref.MODID);
-            Utils.createPaxel("diamond", Ref.MODID);
+        if (!Loader.isModLoaded(Ref.BASEMETALS_MODID)) {
+            Utils.createPaxel("wood");
+            Utils.createPaxel("stone");
+            Utils.createPaxel("iron");
+            Utils.createPaxel("gold");
+            Utils.createPaxel("diamond");
 
-            Utils.createUniversalTool("wood", Ref.MODID);
-            Utils.createUniversalTool("stone", Ref.MODID);
-            Utils.createUniversalTool("iron", Ref.MODID);
-            Utils.createUniversalTool("gold", Ref.MODID);
-            Utils.createUniversalTool("diamond", Ref.MODID);
-
-            Utils.createPaxel("adamantine", BaseMetals.MODID);
-            Utils.createPaxel("antimony", BaseMetals.MODID);
-            Utils.createPaxel("aquarium", BaseMetals.MODID);
-            //bismuthPaxel = Utils.createPaxel("bismuth");
-            //brassPaxel = Utils.createPaxel("brass");
-            Utils.createPaxel("bronze", BaseMetals.MODID);
-            //coalPaxel = Utils.createPaxel("coal");
-            //coldironPaxel = Utils.createPaxel("coldiron");
-            Utils.createPaxel("copper", BaseMetals.MODID);
-            //charcoalPaxel = Utils.createPaxel("charcoal");
-            //cupronickelPaxel = Utils.createPaxel("cupronickel");
-            Utils.createPaxel("electrum", BaseMetals.MODID);
-            //emeraldPaxel = Utils.createPaxel("emerald");
-            Utils.createPaxel("invar", BaseMetals.MODID);
-            /*
-            lapisPaxel = Utils.createPaxel("lapis");
-            leadPaxel = Utils.createPaxel("lead");
-            mercuryPaxel = Utils.createPaxel("mercury");
-            mithrilPaxel = Utils.createPaxel("mithril");
-            nickelPaxel = Utils.createPaxel("nickel");
-            obsidianPaxel = Utils.createPaxel("obsidian");
-            pewterPaxel = Utils.createPaxel("pewter");
-            platinumPaxel = Utils.createPaxel("platinum");
-            prismarinePaxel = Utils.createPaxel("prismarine");
-            quartzPaxel = Utils.createPaxel("quartz");
-            redstonePaxel = Utils.createPaxel("redstone");
-            */
-            Utils.createPaxel("silver", BaseMetals.MODID);
-            //starsteelPaxel = Utils.createPaxel("starsteel");
-            Utils.createPaxel("steel", BaseMetals.MODID);
-            //tinPaxel = Utils.createPaxel("tin");
-            //zincPaxel = Utils.createPaxel("zinc");
-
-            Utils.createUniversalTool("adamantine", BaseMetals.MODID);
-            Utils.createUniversalTool("antimony", BaseMetals.MODID);
-            Utils.createUniversalTool("aquarium", BaseMetals.MODID);
-            //bismuthUniversalTool = Utils.createUniversalTool("bismuth");
-            //brassUniversalTool = Utils.createUniversalTool("brass");
-            Utils.createUniversalTool("bronze", BaseMetals.MODID);
-            //coalUniversalTool = Utils.createUniversalTool("coal");
-            //coldironUniversalTool = Utils.createUniversalTool("coldiron");
-            Utils.createUniversalTool("copper", BaseMetals.MODID);
-            //charcoalUniversalTool = Utils.createUniversalTool("charcoal");
-            //cupronickelUniversalTool = Utils.createUniversalTool("cupronickel");
-            //emeraldUniversalTool = Utils.createUniversalTool("emerald");
-            Utils.createUniversalTool("electrum", BaseMetals.MODID);
-            Utils.createUniversalTool("invar", BaseMetals.MODID);
-            /*
-            lapisUniversalTool = Utils.createUniversalTool("lapis");
-            leadUniversalTool = Utils.createUniversalTool("lead");
-            mercuryUniversalTool = Utils.createUniversalTool("mercury");
-            mithrilUniversalTool = Utils.createUniversalTool("mithril");
-            nickelUniversalTool = Utils.createUniversalTool("nickel");
-            obsidianUniversalTool = Utils.createUniversalTool("obsidian");
-            pewterUniversalTool = Utils.createUniversalTool("pewter");
-            platinumUniversalTool = Utils.createUniversalTool("platinum");
-            prismarineUniversalTool = Utils.createUniversalTool("prismarine");
-            quartzUniversalTool = Utils.createUniversalTool("quartz");
-            redstoneUniversalTool = Utils.createUniversalTool("redstone");
-            */
-            Utils.createUniversalTool("silver", BaseMetals.MODID);
-            //starsteelUniversalTool = Utils.createUniversalTool("starsteel");
-            Utils.createUniversalTool("steel", BaseMetals.MODID);
-            //tinUniversalTool = Utils.createUniversalTool("tin");
-            //zincUniversalTool = Utils.createUniversalTool("zinc");
-        } else {
-            Utils.createPaxel("wood", BaseMetals.MODID);
-            Utils.createPaxel("stone", BaseMetals.MODID);
-            Utils.createPaxel("iron", BaseMetals.MODID);
-            Utils.createPaxel("gold", BaseMetals.MODID);
-            Utils.createPaxel("diamond", BaseMetals.MODID);
-            Utils.createUniversalTool("wood", BaseMetals.MODID);
-            Utils.createUniversalTool("stone", BaseMetals.MODID);
-            Utils.createUniversalTool("iron", BaseMetals.MODID);
-            Utils.createUniversalTool("gold", BaseMetals.MODID);
-            Utils.createUniversalTool("diamond", BaseMetals.MODID);
-        }
-        if (Loader.isModLoaded(ModernMetals.MODID)) {
-            Utils.createPaxel("aluminum", ModernMetals.MODID);
-            /*
-            aluminumbrassPaxel = Utils.createPaxel("aluminumbrass");
-            cadmiumPaxel = Utils.createPaxel("cadmium");
-            chromiumPaxel = Utils.createPaxel("chromium");
-            galvanizedsteelPaxel = Utils.createPaxel("galvanizedsteel");
-            iridiumPaxel = Utils.createPaxel("iridium");
-            magnesiumPaxel = Utils.createPaxel("magneisum");
-            manganesePaxel = Utils.createPaxel("manganese");
-            nichromePaxel = Utils.createPaxel("nichrome");
-            osmiumPaxel = Utils.createPaxel("osmium");
-            plutoniumPaxel = Utils.createPaxel("plutonium");
-            rutilePaxel = Utils.createPaxel("rutile");
-            stainlesssteelPaxel = Utils.createPaxel("stainlesssteel");
-            tantalumPaxel = Utils.createPaxel("tantalum");
-            titaniumPaxel = Utils.createPaxel("titanium");
-            tungstenPaxel = Utils.createPaxel("tungsten");
-            uraniumPaxel = Utils.createPaxel("uranium");
-            zirconiumPaxel = Utils.createPaxel("zirconium");
-            boronPaxel = Utils.createPaxel("boron");
-            berylliumPaxel = Utils.createPaxel("beryllium");
-            thoriumPaxel = Utils.createPaxel("thorium");
-            */
-            Utils.createUniversalTool("aluminum", ModernMetals.MODID);
-            /*
-            aluminumbrassUniversalTool = Utils.createUniversalTool("aluminumbrass");
-            cadmiumUniversalTool = Utils.createUniversalTool("cadmium");
-            chromiumUniversalTool = Utils.createUniversalTool("chromium");
-            galvanizedsteelUniversalTool = Utils.createUniversalTool("galvanizedsteel");
-            iridiumUniversalTool = Utils.createUniversalTool("iridium");
-            magnesiumUniversalTool = Utils.createUniversalTool("magneisum");
-            manganeseUniversalTool = Utils.createUniversalTool("manganese");
-            nichromeUniversalTool = Utils.createUniversalTool("nichrome");
-            osmiumUniversalTool = Utils.createUniversalTool("osmium");
-            plutoniumUniversalTool = Utils.createUniversalTool("plutonium");
-            rutileUniversalTool = Utils.createUniversalTool("rutile");
-            stainlesssteelUniversalTool = Utils.createUniversalTool("stainlesssteel");
-            tantalumUniversalTool = Utils.createUniversalTool("tantalum");
-            titaniumUniversalTool = Utils.createUniversalTool("titanium");
-            tungstenUniversalTool = Utils.createUniversalTool("tungsten");
-            uraniumUniversalTool = Utils.createUniversalTool("uranium");
-            zirconiumUniversalTool = Utils.createUniversalTool("zirconium");
-            boronUniversalTool = Utils.createUniversalTool("boron");
-            berylliumUniversalTool = Utils.createUniversalTool("beryllium");
-            thoriumUniversalTool = Utils.createUniversalTool("thorium");
-            */
+            Utils.createUniversalTool("wood");
+            Utils.createUniversalTool("stone");
+            Utils.createUniversalTool("iron");
+            Utils.createUniversalTool("gold");
+            Utils.createUniversalTool("diamond");
         }
     }
 
     @SideOnly(Side.CLIENT)
     public static void initModels() {
         ModItems.paxels.forEach(item -> ((Paxel) (item)).initModel());
-        ModItems.baseMetalsPaxels.forEach(item -> ((Paxel) (item)).initModel());
-        ModItems.modernMetalsPaxels.forEach(item -> ((Paxel) (item)).initModel());
         ModItems.universalTools.forEach(item -> ((UniversalTool) (item)).initModel());
+    }
+
+
+    @SideOnly(Side.CLIENT)
+    @Optional.Method(modid = Ref.BASEMETALS_MODID)
+    public static void initBaseMetalsModels() {
+        ModItems.baseMetalsPaxels.forEach(item -> ((Paxel) (item)).initModel());
         ModItems.baseMetalsUniversalTools.forEach(item -> ((UniversalTool) (item)).initModel());
+    }
+
+    @SideOnly(Side.CLIENT)
+    @Optional.Method(modid = Ref.MODERNMETALS_MODID)
+    public static void initModernMetalsModels() {
+        ModItems.modernMetalsPaxels.forEach(item -> ((Paxel) (item)).initModel());
         ModItems.modernMetalsUniversalTools.forEach(item -> ((UniversalTool) (item)).initModel());
     }
 }

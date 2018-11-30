@@ -6,7 +6,7 @@ import com.mcmoddev.basemetals.BaseMetals;
 import com.mcmoddev.lib.init.Materials;
 import com.mcmoddev.lib.material.MMDMaterial;
 import com.mcmoddev.modernmetals.ModernMetals;
-import info.kewaiigamer.multitools.Main;
+import info.kewaiigamer.multitools.Tabs;
 import info.kewaiigamer.multitools.enums.EnumVanillaMaterial;
 import info.kewaiigamer.multitools.init.ModItems;
 import net.minecraft.block.Block;
@@ -41,26 +41,24 @@ public class UniversalTool extends ItemPickaxe {
         super(material);
         EnumVanillaMaterial vanilla = EnumVanillaMaterial.valueOf(material.name());
         this.setRegistryName("universaltool_" + vanilla.suffix);
-        this.setUnlocalizedName(modId + ":universaltool_" + vanilla.suffix);
-        this.setCreativeTab(Main.UNIVERSAL_TOOLS);
+        this.setTranslationKey(modId + ":universaltool_" + vanilla.suffix);
+        this.setCreativeTab(Tabs.UNIVERSAL_TOOLS);
         ModItems.universalTools.add(this);
     }
 
     public UniversalTool(String modId, MMDMaterial material, String modId2) {
         super(Objects.requireNonNull(Materials.getToolMaterialFor(material)));
         this.setRegistryName("universaltool_" + material.getName());
-        this.setUnlocalizedName(modId + ":universaltool_" + material.getName());
+        this.setTranslationKey(modId + ":universaltool_" + material.getName());
         if (modId2.equals(modId)) {
             ModItems.universalTools.add(this);
-            this.setCreativeTab(Main.UNIVERSAL_TOOLS);
-        }
-        if (modId2.equals(BaseMetals.MODID)) {
+            this.setCreativeTab(Tabs.UNIVERSAL_TOOLS);
+        } else if (modId2.equals(BaseMetals.MODID)) {
             ModItems.baseMetalsUniversalTools.add(this);
-            this.setCreativeTab(Main.BASEMETALS_UNIVERSAL_TOOLS);
-        }
-        if (modId2.equals(ModernMetals.MODID)) {
+            this.setCreativeTab(Tabs.BASEMETALS_UNIVERSAL_TOOLS);
+        } else if (modId2.equals(ModernMetals.MODID)) {
             ModItems.modernMetalsUniversalTools.add(this);
-            this.setCreativeTab(Main.MODERNMETALS_UNIVERSAL_TOOLS);
+            this.setCreativeTab(Tabs.MODERNMETALS_UNIVERSAL_TOOLS);
         }
     }
 
@@ -118,7 +116,7 @@ public class UniversalTool extends ItemPickaxe {
                 }
 
                 if (block == Blocks.DIRT) {
-                    switch ((BlockDirt.DirtType) iblockstate.getValue(BlockDirt.VARIANT)) {
+                    switch (iblockstate.getValue(BlockDirt.VARIANT)) {
                         case DIRT:
                             this.setBlock(itemstack, player, worldIn, pos, Blocks.FARMLAND.getDefaultState());
                             return EnumActionResult.SUCCESS;

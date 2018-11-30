@@ -1,8 +1,7 @@
 package info.kewaiigamer.multitools;
 
-import info.kewaiigamer.multitools.init.ModItems;
 import info.kewaiigamer.multitools.proxy.CommonProxy;
-import net.minecraft.creativetab.CreativeTabs;
+import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -20,17 +19,14 @@ public class Main {
     @SidedProxy(clientSide = CLIENT_PROXY_CLASS, serverSide = SERVER_PROXY_CLASS)
     public static CommonProxy proxy;
 
-    public static CreativeTabs PAXELS = new MultiToolsTab("paxels", ModItems.paxels);
-    public static CreativeTabs BASEMETALS_PAXELS = new MultiToolsTab("basemetals_paxels", ModItems.baseMetalsPaxels);
-    public static CreativeTabs MODERNMETALS_PAXELS = new MultiToolsTab("modernmetals_paxels", ModItems.modernMetalsPaxels);
-    public static CreativeTabs UNIVERSAL_TOOLS = new MultiToolsTab("universaltools", ModItems.universalTools);
-    public static CreativeTabs BASEMETALS_UNIVERSAL_TOOLS = new MultiToolsTab("basemetals_universaltools", ModItems.baseMetalsUniversalTools);
-    public static CreativeTabs MODERNMETALS_UNIVERSAL_TOOLS = new MultiToolsTab("modernmetals_universaltools", ModItems.modernMetalsUniversalTools);
 
     public static Logger logger;
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent e) {
+        Tabs.initTabs();
+        if (Loader.isModLoaded(Ref.BASEMETALS_MODID)) Tabs.initBaseMetalsTabs();
+        if (Loader.isModLoaded(Ref.MODERNMETALS_MODID)) Tabs.initModernMetalsTabs();
         logger = e.getModLog();
         proxy.preInit(e);
     }

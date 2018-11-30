@@ -3,7 +3,7 @@
   "modid": "multitools",
   "name": "Multi Tools",
   "description": "Adds a paxel and a universal tool. Both combinations of various tools.",
-  "version": "1.4.0",
+  "version": "2.0.0",
   "mcversion": "${mcversion}",
   "updateUrl": "",
   "authorList": ["KewaiiGamer"],

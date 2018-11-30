@@ -1,9 +1,11 @@
 package info.kewaiigamer.multitools.proxy;
 
+import com.mcmoddev.modernmetals.ModernMetals;
 import info.kewaiigamer.multitools.Ref;
 import info.kewaiigamer.multitools.init.ModItems;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Optional;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -18,8 +20,7 @@ public class CommonProxy {
     public static void registerItems(RegistryEvent.Register<Item> event) {
         ModItems.initItems();
         if (!ModItems.paxels.isEmpty()) ModItems.paxels.forEach(item -> event.getRegistry().register(item));
-        if (!ModItems.universalTools.isEmpty())
-            ModItems.universalTools.forEach(item -> event.getRegistry().register(item));
+        if (!ModItems.universalTools.isEmpty()) ModItems.universalTools.forEach(item -> event.getRegistry().register(item));
     }
 
     @Optional.Method(modid = Ref.BASEMETALS_MODID)
@@ -29,8 +30,7 @@ public class CommonProxy {
         ModItems.baseMetalsPaxels.forEach(item -> event.getRegistry().register(item));
         ModItems.baseMetalsUniversalTools.forEach(item -> event.getRegistry().register(item));
         if (!ModItems.paxels.isEmpty()) ModItems.paxels.forEach(item -> event.getRegistry().register(item));
-        if (!ModItems.universalTools.isEmpty())
-            ModItems.universalTools.forEach(item -> event.getRegistry().register(item));
+        if (!ModItems.universalTools.isEmpty()) ModItems.universalTools.forEach(item -> event.getRegistry().register(item));
     }
 
 

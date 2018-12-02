@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xyz",
+    "hs ",
+    " s "
+  ],
+  "key": {
+    "x": {
+      "item": "basemetals:lead_axe"
+    },
+    "y": {
+      "item": "basemetals:lead_pickaxe"
+    },
+    "z": {
+      "item": "basemetals:lead_shovel"
+    },
+    "h": {
+      "item": "basemetals:lead_hoe"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result":
+  {
+    "item": "multitools:universaltool_lead",
+    "count": 1
+  }
+}

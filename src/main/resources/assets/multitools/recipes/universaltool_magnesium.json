@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xyz",
+    "hs ",
+    " s "
+  ],
+  "key": {
+    "x": {
+      "item": "modernmetals:magnesium_axe"
+    },
+    "y": {
+      "item": "modernmetals:magnesium_pickaxe"
+    },
+    "z": {
+      "item": "modernmetals:magnesium_shovel"
+    },
+    "h": {
+      "item": "modernmetals:magnesium_hoe"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result":
+  {
+    "item": "multitools:universaltool_magnesium",
+    "count": 1
+  }
+}

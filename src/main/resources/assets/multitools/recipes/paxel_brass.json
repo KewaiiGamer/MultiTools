@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xyz",
+    " s ",
+    " s "
+  ],
+  "key": {
+    "x": {
+      "item": "basemetals:brass_axe"
+    },
+    "y": {
+      "item": "basemetals:brass_pickaxe"
+    },
+    "z": {
+      "item": "basemetals:brass_shovel"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result":
+  {
+    "item": "multitools:paxel_brass",
+    "count": 1
+  }
+}

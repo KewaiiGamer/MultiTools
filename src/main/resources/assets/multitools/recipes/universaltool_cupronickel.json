@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xyz",
+    "hs ",
+    " s "
+  ],
+  "key": {
+    "x": {
+      "item": "basemetals:cupronickel_axe"
+    },
+    "y": {
+      "item": "basemetals:cupronickel_pickaxe"
+    },
+    "z": {
+      "item": "basemetals:cupronickel_shovel"
+    },
+    "h": {
+      "item": "basemetals:cupronickel_hoe"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result":
+  {
+    "item": "multitools:universaltool_cupronickel",
+    "count": 1
+  }
+}

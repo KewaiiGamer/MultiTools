@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xyz",
+    "hs ",
+    " s "
+  ],
+  "key": {
+    "x": {
+      "item": "basemetals:emerald_axe"
+    },
+    "y": {
+      "item": "basemetals:emerald_pickaxe"
+    },
+    "z": {
+      "item": "basemetals:emerald_shovel"
+    },
+    "h": {
+      "item": "basemetals:emerald_hoe"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result":
+  {
+    "item": "multitools:universaltool_emerald",
+    "count": 1
+  }
+}

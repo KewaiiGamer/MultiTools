@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xyz",
+    " s ",
+    " s "
+  ],
+  "key": {
+    "x": {
+      "item": "basemetals:mithril_axe"
+    },
+    "y": {
+      "item": "basemetals:mithril_pickaxe"
+    },
+    "z": {
+      "item": "basemetals:mithril_shovel"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result":
+  {
+    "item": "multitools:paxel_mithril",
+    "count": 1
+  }
+}

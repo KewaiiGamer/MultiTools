@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xyz",
+    "hs ",
+    " s "
+  ],
+  "key": {
+    "x": {
+      "item": "basemetals:bismuth_axe"
+    },
+    "y": {
+      "item": "basemetals:bismuth_pickaxe"
+    },
+    "z": {
+      "item": "basemetals:bismuth_shovel"
+    },
+    "h": {
+      "item": "basemetals:bismuth_hoe"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result":
+  {
+    "item": "multitools:universaltool_bismuth",
+    "count": 1
+  }
+}

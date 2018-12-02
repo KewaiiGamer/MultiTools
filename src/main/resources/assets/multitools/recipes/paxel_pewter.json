@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xyz",
+    " s ",
+    " s "
+  ],
+  "key": {
+    "x": {
+      "item": "basemetals:pewter_axe"
+    },
+    "y": {
+      "item": "basemetals:pewter_pickaxe"
+    },
+    "z": {
+      "item": "basemetals:pewter_shovel"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result":
+  {
+    "item": "multitools:paxel_pewter",
+    "count": 1
+  }
+}

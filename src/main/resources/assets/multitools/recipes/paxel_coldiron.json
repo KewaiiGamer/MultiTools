@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xyz",
+    " s ",
+    " s "
+  ],
+  "key": {
+    "x": {
+      "item": "basemetals:coldiron_axe"
+    },
+    "y": {
+      "item": "basemetals:coldiron_pickaxe"
+    },
+    "z": {
+      "item": "basemetals:coldiron_shovel"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result":
+  {
+    "item": "multitools:paxel_coldiron",
+    "count": 1
+  }
+}

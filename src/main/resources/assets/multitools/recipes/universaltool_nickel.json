@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xyz",
+    "hs ",
+    " s "
+  ],
+  "key": {
+    "x": {
+      "item": "basemetals:nickel_axe"
+    },
+    "y": {
+      "item": "basemetals:nickel_pickaxe"
+    },
+    "z": {
+      "item": "basemetals:nickel_shovel"
+    },
+    "h": {
+      "item": "basemetals:nickel_hoe"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result":
+  {
+    "item": "multitools:universaltool_nickel",
+    "count": 1
+  }
+}

@@ -54,10 +54,10 @@ public class UniversalTool extends ItemPickaxe {
             ModItems.universalTools.add(this);
             this.setCreativeTab(Tabs.UNIVERSAL_TOOLS);
         } else if (modId2.equals(BaseMetals.MODID)) {
-            ModItems.baseMetalsUniversalTools.add(this);
+            ModItems.baseMetalsUniversalTools.put(material, this);
             this.setCreativeTab(Tabs.BASEMETALS_UNIVERSAL_TOOLS);
         } else if (modId2.equals(ModernMetals.MODID)) {
-            ModItems.modernMetalsUniversalTools.add(this);
+            ModItems.modernMetalsUniversalTools.put(material, this);
             this.setCreativeTab(Tabs.MODERNMETALS_UNIVERSAL_TOOLS);
         }
     }

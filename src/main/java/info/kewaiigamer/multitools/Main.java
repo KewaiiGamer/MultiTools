@@ -1,7 +1,6 @@
 package info.kewaiigamer.multitools;
 
 import info.kewaiigamer.multitools.proxy.CommonProxy;
-import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -24,11 +23,9 @@ public class Main {
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent e) {
-        Tabs.initTabs();
-        if (Loader.isModLoaded(Ref.BASEMETALS_MODID)) Tabs.initBaseMetalsTabs();
-        if (Loader.isModLoaded(Ref.MODERNMETALS_MODID)) Tabs.initModernMetalsTabs();
         logger = e.getModLog();
         proxy.preInit(e);
+        Tabs.initTabs();
     }
 
     @Mod.EventHandler

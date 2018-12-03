@@ -1,5 +1,6 @@
 package info.kewaiigamer.multitools.init;
 
+import com.mcmoddev.lib.material.MMDMaterial;
 import info.kewaiigamer.multitools.Ref;
 import info.kewaiigamer.multitools.items.Paxel;
 import info.kewaiigamer.multitools.items.UniversalTool;
@@ -11,16 +12,17 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class ModItems {
 
     public static List<Item> paxels = new ArrayList<>();
-    public static List<Item> baseMetalsPaxels = new ArrayList<>();
-    public static List<Item> modernMetalsPaxels = new ArrayList<>();
+    public static HashMap<MMDMaterial, Item> baseMetalsPaxels = new HashMap<>();
+    public static HashMap<MMDMaterial, Item> modernMetalsPaxels = new HashMap<>();
     public static List<Item> universalTools = new ArrayList<>();
-    public static List<Item> baseMetalsUniversalTools = new ArrayList<>();
-    public static List<Item> modernMetalsUniversalTools = new ArrayList<>();
+    public static HashMap<MMDMaterial, Item> baseMetalsUniversalTools = new HashMap<>();
+    public static HashMap<MMDMaterial, Item> modernMetalsUniversalTools = new HashMap<>();
 
 
     @Optional.Method(modid = Ref.MODERNMETALS_MODID)
@@ -33,7 +35,7 @@ public class ModItems {
             galvanizedsteelPaxel = Utils.createModernMetalsPaxel("galvanizedsteel");
             iridiumPaxel = Utils.createModernMetalsPaxel("iridium");
             */
-            Utils.createModernMetalsPaxel("magnesium");
+        Utils.createModernMetalsPaxel("magnesium");
             /*
             manganesePaxel = Utils.createModernMetalsPaxel("manganese");
             nichromePaxel = Utils.createModernMetalsPaxel("nichrome");
@@ -58,7 +60,7 @@ public class ModItems {
             galvanizedsteelUniversalTool = Utils.createModernMetalsUniversalTool("galvanizedsteel");
             iridiumUniversalTool = Utils.createModernMetalsUniversalTool("iridium");
             */
-            Utils.createModernMetalsUniversalTool("magnesium");
+        Utils.createModernMetalsUniversalTool("magnesium");
             /*
             manganeseUniversalTool = Utils.createModernMetalsUniversalTool("manganese");
             nichromeUniversalTool = Utils.createModernMetalsUniversalTool("nichrome");
@@ -179,14 +181,14 @@ public class ModItems {
     @SideOnly(Side.CLIENT)
     @Optional.Method(modid = Ref.BASEMETALS_MODID)
     public static void initBaseMetalsModels() {
-        ModItems.baseMetalsPaxels.forEach(item -> ((Paxel) (item)).initModel());
-        ModItems.baseMetalsUniversalTools.forEach(item -> ((UniversalTool) (item)).initModel());
+        ModItems.baseMetalsPaxels.values().forEach(item -> ((Paxel) (item)).initModel());
+        ModItems.baseMetalsUniversalTools.values().forEach(item -> ((UniversalTool) (item)).initModel());
     }
 
     @SideOnly(Side.CLIENT)
     @Optional.Method(modid = Ref.MODERNMETALS_MODID)
     public static void initModernMetalsModels() {
-        ModItems.modernMetalsPaxels.forEach(item -> ((Paxel) (item)).initModel());
-        ModItems.modernMetalsUniversalTools.forEach(item -> ((UniversalTool) (item)).initModel());
+        ModItems.modernMetalsPaxels.values().forEach(item -> ((Paxel) (item)).initModel());
+        ModItems.modernMetalsUniversalTools.values().forEach(item -> ((UniversalTool) (item)).initModel());
     }
 }

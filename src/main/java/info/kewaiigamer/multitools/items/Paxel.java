@@ -46,10 +46,10 @@ public class Paxel extends ItemPickaxe {
             ModItems.paxels.add(this);
             this.setCreativeTab(Tabs.PAXELS);
         } else if (modId2.equals(BaseMetals.MODID)) {
-            ModItems.baseMetalsPaxels.add(this);
+            ModItems.baseMetalsPaxels.put(material, this);
             this.setCreativeTab(Tabs.BASEMETALS_PAXELS);
         } else if (modId2.equals(ModernMetals.MODID)) {
-            ModItems.modernMetalsPaxels.add(this);
+            ModItems.modernMetalsPaxels.put(material, this);
             this.setCreativeTab(Tabs.MODERNMETALS_PAXELS);
         }
     }

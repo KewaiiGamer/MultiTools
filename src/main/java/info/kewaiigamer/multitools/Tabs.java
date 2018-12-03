@@ -3,6 +3,8 @@ package info.kewaiigamer.multitools;
 import info.kewaiigamer.multitools.init.ModItems;
 import net.minecraft.creativetab.CreativeTabs;
 
+import java.util.ArrayList;
+
 public class Tabs {
 
     public static CreativeTabs PAXELS;
@@ -13,13 +15,13 @@ public class Tabs {
     public static CreativeTabs MODERNMETALS_UNIVERSAL_TOOLS;
 
     public static void initBaseMetalsTabs() {
-        BASEMETALS_PAXELS = new MultiToolsTab("basemetals_paxels", ModItems.baseMetalsPaxels);
-        BASEMETALS_UNIVERSAL_TOOLS = new MultiToolsTab("basemetals_universaltools", ModItems.baseMetalsUniversalTools);
+        BASEMETALS_PAXELS = new MultiToolsTab("basemetals_paxels", new ArrayList<>(ModItems.baseMetalsPaxels.values()));
+        BASEMETALS_UNIVERSAL_TOOLS = new MultiToolsTab("basemetals_universaltools", new ArrayList<>(ModItems.baseMetalsUniversalTools.values()));
     }
 
     public static void initModernMetalsTabs() {
-        MODERNMETALS_PAXELS = new MultiToolsTab("modernmetals_paxels", ModItems.modernMetalsPaxels);
-        MODERNMETALS_UNIVERSAL_TOOLS = new MultiToolsTab("modernmetals_universaltools", ModItems.modernMetalsUniversalTools);
+        MODERNMETALS_PAXELS = new MultiToolsTab("modernmetals_paxels", new ArrayList<>(ModItems.modernMetalsPaxels.values()));
+        MODERNMETALS_UNIVERSAL_TOOLS = new MultiToolsTab("modernmetals_universaltools", new ArrayList<>(ModItems.modernMetalsUniversalTools.values()));
     }
 
     public static void initTabs() {
